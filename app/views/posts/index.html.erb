@@ -12,10 +12,10 @@
     <br>
     <hr>
 
+    <!--Render the Post partial here-->
     <div class="row" id="container_posts">
         <%= render @posts %>
     </div>
-
 
     <!-- Modal  create action -->
       <%= form_for(@post, remote: true) do |f| %>
