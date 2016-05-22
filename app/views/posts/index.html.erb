@@ -19,6 +19,7 @@
 
     <!-- Modal  create action -->
       <%= form_for(@post, remote: true) do |f| %>
+        <!--Data target and modal ID should be equal-->
         <div class="modal fade" id="mynewpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -31,10 +32,12 @@
             <div class="modal-body">
               <div class="field">
                 <%= f.label :title %><br>
+                <!--Class used for AJAX request-->
                 <%= f.text_area :title, class: "form-control post_title" %>
               </div>
               <div class="field">
                 <%= f.label :content %><br>
+                <!--Class used for AJAX request-->
                 <%= f.text_area :content, class: "form-control post_content" %>
               </div>
             </div>
